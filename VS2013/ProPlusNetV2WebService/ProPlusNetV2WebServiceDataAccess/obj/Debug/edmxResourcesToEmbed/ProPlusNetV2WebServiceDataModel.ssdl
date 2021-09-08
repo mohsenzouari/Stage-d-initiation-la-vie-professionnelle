@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProPlusNetV2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="COMMANDE">
+    <Key>
+      <PropertyRef Name="IdCommande" />
+    </Key>
+    <Property Name="IdCommande" Type="int" Nullable="false" />
+    <Property Name="NumCommande" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CodeCommande" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="IdTiers" Type="int" Nullable="false" />
+    <Property Name="DateCommande" Type="datetime" Nullable="false" />
+    <Property Name="IdSemaineCommande" Type="int" Nullable="false" />
+    <Property Name="DateExportPrévue" Type="datetime" />
+    <Property Name="IdSemaineExportPrévue" Type="int" Nullable="false" />
+    <Property Name="DateExportRéelle" Type="datetime" />
+    <Property Name="IdSemaineExportRéelle" Type="int" Nullable="false" />
+    <Property Name="DateLivMatière" Type="datetime" />
+    <Property Name="IdSemaineLivMatière" Type="int" Nullable="false" />
+    <Property Name="IdNote" Type="smallint" Nullable="false" />
+    <Property Name="Annulée" Type="smallint" Nullable="false" />
+    <Property Name="Bloquée" Type="smallint" Nullable="false" />
+    <Property Name="IdEtat" Type="smallint" Nullable="false" />
+    <Property Name="IdStatut" Type="smallint" Nullable="false" />
+    <Property Name="TypeSaisie" Type="smallint" Nullable="false" />
+    <Property Name="ConcernéeParLePlanning" Type="smallint" Nullable="false" />
+    <Property Name="Remarque" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Texte1" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Texte2" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Date1" Type="datetime" />
+    <Property Name="Date2" Type="datetime" />
+    <Property Name="Entier1" Type="int" Nullable="false" />
+    <Property Name="Entier2" Type="int" Nullable="false" />
+    <Property Name="Réel1" Type="float" Nullable="false" />
+    <Property Name="Réel2" Type="float" Nullable="false" />
+    <Property Name="Flag0" Type="smallint" Nullable="false" />
+    <Property Name="Flag1" Type="smallint" Nullable="false" />
+    <Property Name="InsertDate" Type="datetime" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIP" Type="nvarchar" MaxLength="20" />
+    <Property Name="ModifDate" Type="datetime" />
+    <Property Name="IdSite" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COMMANDE_RESSOURCE">
+    <Key>
+      <PropertyRef Name="IdRessource" />
+    </Key>
+    <Property Name="IdRessource" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdObjet" Type="int" Nullable="false" />
+    <Property Name="CheminComplet" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="NomFichier" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ExtFichier" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AppParDéfaut" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Ordre" Type="int" Nullable="false" />
+    <Property Name="Actif" Type="smallint" Nullable="false" />
+    <Property Name="Remarque" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="InsertDate" Type="datetime" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIP" Type="nvarchar" MaxLength="20" />
+    <Property Name="IdSite" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIERS">
+    <Key>
+      <PropertyRef Name="IdTiers" />
+    </Key>
+    <Property Name="IdTiers" Type="int" Nullable="false" />
+    <Property Name="CodeTiers" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NomSociété" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdTiersType" Type="smallint" Nullable="false" />
+    <Property Name="Responsable" Type="nvarchar" MaxLength="100" />
+    <Property Name="ResponsableTél" Type="nvarchar" MaxLength="50" />
+    <Property Name="ResponsableMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="Activité" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdMonnaie" Type="int" Nullable="false" />
+    <Property Name="Banque" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumCompte" Type="nvarchar" MaxLength="50" />
+    <Property Name="MatriculeFiscal" Type="nvarchar" MaxLength="50" />
+    <Property Name="Registre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rue" Type="nvarchar" MaxLength="50" />
+    <Property Name="Région" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ville" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodePostal" Type="nvarchar" MaxLength="10" />
+    <Property Name="IdPays" Type="int" Nullable="false" />
+    <Property Name="Tél1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tél2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="URL" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rue_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="Région_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ville_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodePostal_L" Type="nvarchar" MaxLength="10" />
+    <Property Name="IdPays_L" Type="int" Nullable="false" />
+    <Property Name="Tél1_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tél2_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="URL_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rue_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="Région_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ville_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodePostal_F" Type="nvarchar" MaxLength="10" />
+    <Property Name="IdPays_F" Type="int" Nullable="false" />
+    <Property Name="Tél1_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tél2_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="URL_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModeLivraison" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModePayement" Type="nvarchar" MaxLength="100" />
+    <Property Name="InsertDate" Type="datetime" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIP" Type="nvarchar" MaxLength="20" />
+    <Property Name="Déscription" Type="nvarchar" MaxLength="250" />
+    <Property Name="Remarques" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModifDate" Type="datetime" />
+    <Property Name="IdSite" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_COMMANDE_RESSOURCE_COMMANDE">
+    <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COMMANDE_RESSOURCE" Type="Self.COMMANDE_RESSOURCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMMANDE">
+        <PropertyRef Name="IdCommande" />
+      </Principal>
+      <Dependent Role="COMMANDE_RESSOURCE">
+        <PropertyRef Name="IdObjet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMANDE_TIERS">
+    <End Role="TIERS" Type="Self.TIERS" Multiplicity="1" />
+    <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIERS">
+        <PropertyRef Name="IdTiers" />
+      </Principal>
+      <Dependent Role="COMMANDE">
+        <PropertyRef Name="IdTiers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProPlusNetV2ModelStoreContainer">
+    <EntitySet Name="COMMANDE" EntityType="Self.COMMANDE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMMANDE_RESSOURCE" EntityType="Self.COMMANDE_RESSOURCE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIERS" EntityType="Self.TIERS" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_COMMANDE_RESSOURCE_COMMANDE" Association="Self.FK_COMMANDE_RESSOURCE_COMMANDE">
+      <End Role="COMMANDE" EntitySet="COMMANDE" />
+      <End Role="COMMANDE_RESSOURCE" EntitySet="COMMANDE_RESSOURCE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMANDE_TIERS" Association="Self.FK_COMMANDE_TIERS">
+      <End Role="TIERS" EntitySet="TIERS" />
+      <End Role="COMMANDE" EntitySet="COMMANDE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

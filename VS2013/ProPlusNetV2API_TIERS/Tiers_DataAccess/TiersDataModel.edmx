@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ProPlusNetV2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TIERS">
+          <Key>
+            <PropertyRef Name="IdTiers" />
+          </Key>
+          <Property Name="IdTiers" Type="int" Nullable="false" />
+          <Property Name="CodeTiers" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NomSociété" Type="nvarchar" MaxLength="250" />
+          <Property Name="IdTiersType" Type="smallint" Nullable="false" />
+          <Property Name="Responsable" Type="nvarchar" MaxLength="100" />
+          <Property Name="ResponsableTél" Type="nvarchar" MaxLength="50" />
+          <Property Name="ResponsableMail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Activité" Type="nvarchar" MaxLength="50" />
+          <Property Name="IdMonnaie" Type="int" Nullable="false" />
+          <Property Name="Banque" Type="nvarchar" MaxLength="50" />
+          <Property Name="NumCompte" Type="nvarchar" MaxLength="50" />
+          <Property Name="MatriculeFiscal" Type="nvarchar" MaxLength="50" />
+          <Property Name="Registre" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rue" Type="nvarchar" MaxLength="50" />
+          <Property Name="Région" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ville" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodePostal" Type="nvarchar" MaxLength="10" />
+          <Property Name="IdPays" Type="int" Nullable="false" />
+          <Property Name="Tél1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tél2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="URL" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rue_L" Type="nvarchar" MaxLength="50" />
+          <Property Name="Région_L" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ville_L" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodePostal_L" Type="nvarchar" MaxLength="10" />
+          <Property Name="IdPays_L" Type="int" Nullable="false" />
+          <Property Name="Tél1_L" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tél2_L" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax_L" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email_L" Type="nvarchar" MaxLength="50" />
+          <Property Name="URL_L" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rue_F" Type="nvarchar" MaxLength="50" />
+          <Property Name="Région_F" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ville_F" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodePostal_F" Type="nvarchar" MaxLength="10" />
+          <Property Name="IdPays_F" Type="int" Nullable="false" />
+          <Property Name="Tél1_F" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tél2_F" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax_F" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email_F" Type="nvarchar" MaxLength="50" />
+          <Property Name="URL_F" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModeLivraison" Type="nvarchar" MaxLength="100" />
+          <Property Name="ModePayement" Type="nvarchar" MaxLength="100" />
+          <Property Name="InsertDate" Type="datetime" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserIP" Type="nvarchar" MaxLength="20" />
+          <Property Name="Déscription" Type="nvarchar" MaxLength="250" />
+          <Property Name="Remarques" Type="nvarchar" MaxLength="250" />
+          <Property Name="ModifDate" Type="datetime" />
+          <Property Name="IdSite" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ProPlusNetV2ModelStoreContainer">
+          <EntitySet Name="TIERS" EntityType="Self.TIERS" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProPlusNetV2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TIERS">
+          <Key>
+            <PropertyRef Name="IdTiers" />
+          </Key>
+          <Property Name="IdTiers" Type="Int32" Nullable="false" />
+          <Property Name="CodeTiers" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NomSociété" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IdTiersType" Type="Int16" Nullable="false" />
+          <Property Name="Responsable" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ResponsableTél" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ResponsableMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Activité" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IdMonnaie" Type="Int32" Nullable="false" />
+          <Property Name="Banque" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NumCompte" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MatriculeFiscal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Registre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Région" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ville" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodePostal" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IdPays" Type="Int32" Nullable="false" />
+          <Property Name="Tél1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tél2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="URL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rue_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Région_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ville_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodePostal_L" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IdPays_L" Type="Int32" Nullable="false" />
+          <Property Name="Tél1_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tél2_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fax_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="URL_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rue_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Région_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ville_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodePostal_F" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IdPays_F" Type="Int32" Nullable="false" />
+          <Property Name="Tél1_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tél2_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fax_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="URL_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModeLivraison" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ModePayement" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="InsertDate" Type="DateTime" Precision="3" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Déscription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Remarques" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ModifDate" Type="DateTime" Precision="3" />
+          <Property Name="IdSite" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ProPlusNetV2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TIERS" EntityType="Self.TIERS" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProPlusNetV2ModelStoreContainer" CdmEntityContainer="ProPlusNetV2Entities">
+          <EntitySetMapping Name="TIERS">
+            <EntityTypeMapping TypeName="ProPlusNetV2Model.TIERS">
+              <MappingFragment StoreEntitySet="TIERS">
+                <ScalarProperty Name="IdTiers" ColumnName="IdTiers" />
+                <ScalarProperty Name="CodeTiers" ColumnName="CodeTiers" />
+                <ScalarProperty Name="NomSociété" ColumnName="NomSociété" />
+                <ScalarProperty Name="IdTiersType" ColumnName="IdTiersType" />
+                <ScalarProperty Name="Responsable" ColumnName="Responsable" />
+                <ScalarProperty Name="ResponsableTél" ColumnName="ResponsableTél" />
+                <ScalarProperty Name="ResponsableMail" ColumnName="ResponsableMail" />
+                <ScalarProperty Name="Activité" ColumnName="Activité" />
+                <ScalarProperty Name="IdMonnaie" ColumnName="IdMonnaie" />
+                <ScalarProperty Name="Banque" ColumnName="Banque" />
+                <ScalarProperty Name="NumCompte" ColumnName="NumCompte" />
+                <ScalarProperty Name="MatriculeFiscal" ColumnName="MatriculeFiscal" />
+                <ScalarProperty Name="Registre" ColumnName="Registre" />
+                <ScalarProperty Name="Rue" ColumnName="Rue" />
+                <ScalarProperty Name="Région" ColumnName="Région" />
+                <ScalarProperty Name="Ville" ColumnName="Ville" />
+                <ScalarProperty Name="CodePostal" ColumnName="CodePostal" />
+                <ScalarProperty Name="IdPays" ColumnName="IdPays" />
+                <ScalarProperty Name="Tél1" ColumnName="Tél1" />
+                <ScalarProperty Name="Tél2" ColumnName="Tél2" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="Rue_L" ColumnName="Rue_L" />
+                <ScalarProperty Name="Région_L" ColumnName="Région_L" />
+                <ScalarProperty Name="Ville_L" ColumnName="Ville_L" />
+                <ScalarProperty Name="CodePostal_L" ColumnName="CodePostal_L" />
+                <ScalarProperty Name="IdPays_L" ColumnName="IdPays_L" />
+                <ScalarProperty Name="Tél1_L" ColumnName="Tél1_L" />
+                <ScalarProperty Name="Tél2_L" ColumnName="Tél2_L" />
+                <ScalarProperty Name="Fax_L" ColumnName="Fax_L" />
+                <ScalarProperty Name="Email_L" ColumnName="Email_L" />
+                <ScalarProperty Name="URL_L" ColumnName="URL_L" />
+                <ScalarProperty Name="Rue_F" ColumnName="Rue_F" />
+                <ScalarProperty Name="Région_F" ColumnName="Région_F" />
+                <ScalarProperty Name="Ville_F" ColumnName="Ville_F" />
+                <ScalarProperty Name="CodePostal_F" ColumnName="CodePostal_F" />
+                <ScalarProperty Name="IdPays_F" ColumnName="IdPays_F" />
+                <ScalarProperty Name="Tél1_F" ColumnName="Tél1_F" />
+                <ScalarProperty Name="Tél2_F" ColumnName="Tél2_F" />
+                <ScalarProperty Name="Fax_F" ColumnName="Fax_F" />
+                <ScalarProperty Name="Email_F" ColumnName="Email_F" />
+                <ScalarProperty Name="URL_F" ColumnName="URL_F" />
+                <ScalarProperty Name="ModeLivraison" ColumnName="ModeLivraison" />
+                <ScalarProperty Name="ModePayement" ColumnName="ModePayement" />
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+                <ScalarProperty Name="Déscription" ColumnName="Déscription" />
+                <ScalarProperty Name="Remarques" ColumnName="Remarques" />
+                <ScalarProperty Name="ModifDate" ColumnName="ModifDate" />
+                <ScalarProperty Name="IdSite" ColumnName="IdSite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

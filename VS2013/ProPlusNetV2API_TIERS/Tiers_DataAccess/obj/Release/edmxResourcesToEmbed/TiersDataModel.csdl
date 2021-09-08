@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProPlusNetV2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TIERS">
+    <Key>
+      <PropertyRef Name="IdTiers" />
+    </Key>
+    <Property Name="IdTiers" Type="Int32" Nullable="false" />
+    <Property Name="CodeTiers" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NomSociété" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IdTiersType" Type="Int16" Nullable="false" />
+    <Property Name="Responsable" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ResponsableTél" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ResponsableMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Activité" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdMonnaie" Type="Int32" Nullable="false" />
+    <Property Name="Banque" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumCompte" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MatriculeFiscal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Registre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Rue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Région" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ville" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CodePostal" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IdPays" Type="Int32" Nullable="false" />
+    <Property Name="Tél1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tél2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="URL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Rue_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Région_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ville_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CodePostal_L" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IdPays_L" Type="Int32" Nullable="false" />
+    <Property Name="Tél1_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tél2_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="URL_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Rue_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Région_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ville_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CodePostal_F" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IdPays_F" Type="Int32" Nullable="false" />
+    <Property Name="Tél1_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tél2_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="URL_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModeLivraison" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ModePayement" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InsertDate" Type="DateTime" Precision="3" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Déscription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Remarques" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ModifDate" Type="DateTime" Precision="3" />
+    <Property Name="IdSite" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ProPlusNetV2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TIERS" EntityType="Self.TIERS" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProPlusNetV2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="COMMANDE">
+    <Key>
+      <PropertyRef Name="IdCommande" />
+    </Key>
+    <Property Name="IdCommande" Type="Int32" Nullable="false" />
+    <Property Name="NumCommande" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CodeCommande" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdTiers" Type="Int32" Nullable="false" />
+    <Property Name="DateCommande" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IdSemaineCommande" Type="Int32" Nullable="false" />
+    <Property Name="DateExportPrévue" Type="DateTime" Precision="3" />
+    <Property Name="IdSemaineExportPrévue" Type="Int32" Nullable="false" />
+    <Property Name="DateExportRéelle" Type="DateTime" Precision="3" />
+    <Property Name="IdSemaineExportRéelle" Type="Int32" Nullable="false" />
+    <Property Name="DateLivMatière" Type="DateTime" Precision="3" />
+    <Property Name="IdSemaineLivMatière" Type="Int32" Nullable="false" />
+    <Property Name="IdNote" Type="Int16" Nullable="false" />
+    <Property Name="Annulée" Type="Int16" Nullable="false" />
+    <Property Name="Bloquée" Type="Int16" Nullable="false" />
+    <Property Name="IdEtat" Type="Int16" Nullable="false" />
+    <Property Name="IdStatut" Type="Int16" Nullable="false" />
+    <Property Name="TypeSaisie" Type="Int16" Nullable="false" />
+    <Property Name="ConcernéeParLePlanning" Type="Int16" Nullable="false" />
+    <Property Name="Remarque" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Texte1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Texte2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date1" Type="DateTime" Precision="3" />
+    <Property Name="Date2" Type="DateTime" Precision="3" />
+    <Property Name="Entier1" Type="Int32" Nullable="false" />
+    <Property Name="Entier2" Type="Int32" Nullable="false" />
+    <Property Name="Réel1" Type="Double" Nullable="false" />
+    <Property Name="Réel2" Type="Double" Nullable="false" />
+    <Property Name="Flag0" Type="Int16" Nullable="false" />
+    <Property Name="Flag1" Type="Int16" Nullable="false" />
+    <Property Name="InsertDate" Type="DateTime" Precision="3" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ModifDate" Type="DateTime" Precision="3" />
+    <Property Name="IdSite" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="COMMANDE_RESSOURCE" Relationship="Self.FK_COMMANDE_RESSOURCE_COMMANDE" FromRole="COMMANDE" ToRole="COMMANDE_RESSOURCE" />
+    <NavigationProperty Name="TIERS" Relationship="Self.FK_COMMANDE_TIERS" FromRole="COMMANDE" ToRole="TIERS" />
+  </EntityType>
+  <EntityType Name="COMMANDE_RESSOURCE">
+    <Key>
+      <PropertyRef Name="IdRessource" />
+    </Key>
+    <Property Name="IdRessource" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdObjet" Type="Int32" Nullable="false" />
+    <Property Name="CheminComplet" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NomFichier" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ExtFichier" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AppParDéfaut" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ordre" Type="Int32" Nullable="false" />
+    <Property Name="Actif" Type="Int16" Nullable="false" />
+    <Property Name="Remarque" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InsertDate" Type="DateTime" Precision="3" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IdSite" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="COMMANDE" Relationship="Self.FK_COMMANDE_RESSOURCE_COMMANDE" FromRole="COMMANDE_RESSOURCE" ToRole="COMMANDE" />
+  </EntityType>
+  <EntityType Name="TIERS">
+    <Key>
+      <PropertyRef Name="IdTiers" />
+    </Key>
+    <Property Name="IdTiers" Type="Int32" Nullable="false" />
+    <Property Name="CodeTiers" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NomSociété" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IdTiersType" Type="Int16" Nullable="false" />
+    <Property Name="Responsable" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ResponsableTél" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ResponsableMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Activité" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdMonnaie" Type="Int32" Nullable="false" />
+    <Property Name="Banque" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumCompte" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MatriculeFiscal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Registre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Rue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Région" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ville" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CodePostal" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IdPays" Type="Int32" Nullable="false" />
+    <Property Name="Tél1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tél2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="URL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Rue_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Région_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ville_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CodePostal_L" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IdPays_L" Type="Int32" Nullable="false" />
+    <Property Name="Tél1_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tél2_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="URL_L" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Rue_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Région_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ville_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CodePostal_F" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IdPays_F" Type="Int32" Nullable="false" />
+    <Property Name="Tél1_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tél2_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="URL_F" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModeLivraison" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ModePayement" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InsertDate" Type="DateTime" Precision="3" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Déscription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Remarques" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ModifDate" Type="DateTime" Precision="3" />
+    <Property Name="IdSite" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="COMMANDE" Relationship="Self.FK_COMMANDE_TIERS" FromRole="TIERS" ToRole="COMMANDE" />
+  </EntityType>
+  <Association Name="FK_COMMANDE_RESSOURCE_COMMANDE">
+    <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COMMANDE_RESSOURCE" Type="Self.COMMANDE_RESSOURCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMMANDE">
+        <PropertyRef Name="IdCommande" />
+      </Principal>
+      <Dependent Role="COMMANDE_RESSOURCE">
+        <PropertyRef Name="IdObjet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMANDE_TIERS">
+    <End Role="TIERS" Type="Self.TIERS" Multiplicity="1" />
+    <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIERS">
+        <PropertyRef Name="IdTiers" />
+      </Principal>
+      <Dependent Role="COMMANDE">
+        <PropertyRef Name="IdTiers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProPlusNetV2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="COMMANDE" EntityType="Self.COMMANDE" />
+    <EntitySet Name="COMMANDE_RESSOURCE" EntityType="Self.COMMANDE_RESSOURCE" />
+    <EntitySet Name="TIERS" EntityType="Self.TIERS" />
+    <AssociationSet Name="FK_COMMANDE_RESSOURCE_COMMANDE" Association="Self.FK_COMMANDE_RESSOURCE_COMMANDE">
+      <End Role="COMMANDE" EntitySet="COMMANDE" />
+      <End Role="COMMANDE_RESSOURCE" EntitySet="COMMANDE_RESSOURCE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMANDE_TIERS" Association="Self.FK_COMMANDE_TIERS">
+      <End Role="TIERS" EntitySet="TIERS" />
+      <End Role="COMMANDE" EntitySet="COMMANDE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

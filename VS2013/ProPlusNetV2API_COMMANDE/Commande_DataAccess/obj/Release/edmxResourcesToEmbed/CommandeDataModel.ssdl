@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProPlusNetV2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="COMMANDE">
+    <Key>
+      <PropertyRef Name="IdCommande" />
+    </Key>
+    <Property Name="IdCommande" Type="int" Nullable="false" />
+    <Property Name="NumCommande" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CodeCommande" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="IdTiers" Type="int" Nullable="false" />
+    <Property Name="DateCommande" Type="datetime" Nullable="false" />
+    <Property Name="IdSemaineCommande" Type="int" Nullable="false" />
+    <Property Name="DateExportPrévue" Type="datetime" />
+    <Property Name="IdSemaineExportPrévue" Type="int" Nullable="false" />
+    <Property Name="DateExportRéelle" Type="datetime" />
+    <Property Name="IdSemaineExportRéelle" Type="int" Nullable="false" />
+    <Property Name="DateLivMatière" Type="datetime" />
+    <Property Name="IdSemaineLivMatière" Type="int" Nullable="false" />
+    <Property Name="IdNote" Type="smallint" Nullable="false" />
+    <Property Name="Annulée" Type="smallint" Nullable="false" />
+    <Property Name="Bloquée" Type="smallint" Nullable="false" />
+    <Property Name="IdEtat" Type="smallint" Nullable="false" />
+    <Property Name="IdStatut" Type="smallint" Nullable="false" />
+    <Property Name="TypeSaisie" Type="smallint" Nullable="false" />
+    <Property Name="ConcernéeParLePlanning" Type="smallint" Nullable="false" />
+    <Property Name="Remarque" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Texte1" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Texte2" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Date1" Type="datetime" />
+    <Property Name="Date2" Type="datetime" />
+    <Property Name="Entier1" Type="int" Nullable="false" />
+    <Property Name="Entier2" Type="int" Nullable="false" />
+    <Property Name="Réel1" Type="float" Nullable="false" />
+    <Property Name="Réel2" Type="float" Nullable="false" />
+    <Property Name="Flag0" Type="smallint" Nullable="false" />
+    <Property Name="Flag1" Type="smallint" Nullable="false" />
+    <Property Name="InsertDate" Type="datetime" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIP" Type="nvarchar" MaxLength="20" />
+    <Property Name="ModifDate" Type="datetime" />
+    <Property Name="IdSite" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ProPlusNetV2ModelStoreContainer">
+    <EntitySet Name="COMMANDE" EntityType="Self.COMMANDE" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

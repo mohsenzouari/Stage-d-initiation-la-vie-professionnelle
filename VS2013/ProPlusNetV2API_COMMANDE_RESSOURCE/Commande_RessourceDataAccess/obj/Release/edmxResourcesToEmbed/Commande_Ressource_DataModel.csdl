@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProPlusNetV2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="COMMANDE_RESSOURCE">
+    <Key>
+      <PropertyRef Name="IdRessource" />
+    </Key>
+    <Property Name="IdRessource" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdObjet" Type="Int32" Nullable="false" />
+    <Property Name="CheminComplet" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NomFichier" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ExtFichier" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AppParDéfaut" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ordre" Type="Int32" Nullable="false" />
+    <Property Name="Actif" Type="Int16" Nullable="false" />
+    <Property Name="Remarque" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InsertDate" Type="DateTime" Precision="3" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IdSite" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ProPlusNetV2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="COMMANDE_RESSOURCE" EntityType="Self.COMMANDE_RESSOURCE" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProPlusNetV2ModelStoreContainer" CdmEntityContainer="ProPlusNetV2Entities">
+    <EntitySetMapping Name="COMMANDE">
+      <EntityTypeMapping TypeName="ProPlusNetV2Model.COMMANDE">
+        <MappingFragment StoreEntitySet="COMMANDE">
+          <ScalarProperty Name="IdCommande" ColumnName="IdCommande" />
+          <ScalarProperty Name="NumCommande" ColumnName="NumCommande" />
+          <ScalarProperty Name="CodeCommande" ColumnName="CodeCommande" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IdTiers" ColumnName="IdTiers" />
+          <ScalarProperty Name="DateCommande" ColumnName="DateCommande" />
+          <ScalarProperty Name="IdSemaineCommande" ColumnName="IdSemaineCommande" />
+          <ScalarProperty Name="DateExportPrévue" ColumnName="DateExportPrévue" />
+          <ScalarProperty Name="IdSemaineExportPrévue" ColumnName="IdSemaineExportPrévue" />
+          <ScalarProperty Name="DateExportRéelle" ColumnName="DateExportRéelle" />
+          <ScalarProperty Name="IdSemaineExportRéelle" ColumnName="IdSemaineExportRéelle" />
+          <ScalarProperty Name="DateLivMatière" ColumnName="DateLivMatière" />
+          <ScalarProperty Name="IdSemaineLivMatière" ColumnName="IdSemaineLivMatière" />
+          <ScalarProperty Name="IdNote" ColumnName="IdNote" />
+          <ScalarProperty Name="Annulée" ColumnName="Annulée" />
+          <ScalarProperty Name="Bloquée" ColumnName="Bloquée" />
+          <ScalarProperty Name="IdEtat" ColumnName="IdEtat" />
+          <ScalarProperty Name="IdStatut" ColumnName="IdStatut" />
+          <ScalarProperty Name="TypeSaisie" ColumnName="TypeSaisie" />
+          <ScalarProperty Name="ConcernéeParLePlanning" ColumnName="ConcernéeParLePlanning" />
+          <ScalarProperty Name="Remarque" ColumnName="Remarque" />
+          <ScalarProperty Name="Texte1" ColumnName="Texte1" />
+          <ScalarProperty Name="Texte2" ColumnName="Texte2" />
+          <ScalarProperty Name="Date1" ColumnName="Date1" />
+          <ScalarProperty Name="Date2" ColumnName="Date2" />
+          <ScalarProperty Name="Entier1" ColumnName="Entier1" />
+          <ScalarProperty Name="Entier2" ColumnName="Entier2" />
+          <ScalarProperty Name="Réel1" ColumnName="Réel1" />
+          <ScalarProperty Name="Réel2" ColumnName="Réel2" />
+          <ScalarProperty Name="Flag0" ColumnName="Flag0" />
+          <ScalarProperty Name="Flag1" ColumnName="Flag1" />
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifDate" ColumnName="ModifDate" />
+          <ScalarProperty Name="IdSite" ColumnName="IdSite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

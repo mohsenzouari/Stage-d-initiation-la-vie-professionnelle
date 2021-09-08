@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProPlusNetV2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TIERS">
+    <Key>
+      <PropertyRef Name="IdTiers" />
+    </Key>
+    <Property Name="IdTiers" Type="int" Nullable="false" />
+    <Property Name="CodeTiers" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NomSociété" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdTiersType" Type="smallint" Nullable="false" />
+    <Property Name="Responsable" Type="nvarchar" MaxLength="100" />
+    <Property Name="ResponsableTél" Type="nvarchar" MaxLength="50" />
+    <Property Name="ResponsableMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="Activité" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdMonnaie" Type="int" Nullable="false" />
+    <Property Name="Banque" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumCompte" Type="nvarchar" MaxLength="50" />
+    <Property Name="MatriculeFiscal" Type="nvarchar" MaxLength="50" />
+    <Property Name="Registre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rue" Type="nvarchar" MaxLength="50" />
+    <Property Name="Région" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ville" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodePostal" Type="nvarchar" MaxLength="10" />
+    <Property Name="IdPays" Type="int" Nullable="false" />
+    <Property Name="Tél1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tél2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="URL" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rue_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="Région_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ville_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodePostal_L" Type="nvarchar" MaxLength="10" />
+    <Property Name="IdPays_L" Type="int" Nullable="false" />
+    <Property Name="Tél1_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tél2_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="URL_L" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rue_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="Région_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ville_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodePostal_F" Type="nvarchar" MaxLength="10" />
+    <Property Name="IdPays_F" Type="int" Nullable="false" />
+    <Property Name="Tél1_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tél2_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="URL_F" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModeLivraison" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModePayement" Type="nvarchar" MaxLength="100" />
+    <Property Name="InsertDate" Type="datetime" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIP" Type="nvarchar" MaxLength="20" />
+    <Property Name="Déscription" Type="nvarchar" MaxLength="250" />
+    <Property Name="Remarques" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModifDate" Type="datetime" />
+    <Property Name="IdSite" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ProPlusNetV2ModelStoreContainer">
+    <EntitySet Name="TIERS" EntityType="Self.TIERS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

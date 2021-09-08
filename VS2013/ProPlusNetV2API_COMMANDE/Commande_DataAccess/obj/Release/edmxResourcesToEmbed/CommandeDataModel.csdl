@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProPlusNetV2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="COMMANDE">
+    <Key>
+      <PropertyRef Name="IdCommande" />
+    </Key>
+    <Property Name="IdCommande" Type="Int32" Nullable="false" />
+    <Property Name="NumCommande" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CodeCommande" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdTiers" Type="Int32" Nullable="false" />
+    <Property Name="DateCommande" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IdSemaineCommande" Type="Int32" Nullable="false" />
+    <Property Name="DateExportPrévue" Type="DateTime" Precision="3" />
+    <Property Name="IdSemaineExportPrévue" Type="Int32" Nullable="false" />
+    <Property Name="DateExportRéelle" Type="DateTime" Precision="3" />
+    <Property Name="IdSemaineExportRéelle" Type="Int32" Nullable="false" />
+    <Property Name="DateLivMatière" Type="DateTime" Precision="3" />
+    <Property Name="IdSemaineLivMatière" Type="Int32" Nullable="false" />
+    <Property Name="IdNote" Type="Int16" Nullable="false" />
+    <Property Name="Annulée" Type="Int16" Nullable="false" />
+    <Property Name="Bloquée" Type="Int16" Nullable="false" />
+    <Property Name="IdEtat" Type="Int16" Nullable="false" />
+    <Property Name="IdStatut" Type="Int16" Nullable="false" />
+    <Property Name="TypeSaisie" Type="Int16" Nullable="false" />
+    <Property Name="ConcernéeParLePlanning" Type="Int16" Nullable="false" />
+    <Property Name="Remarque" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Texte1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Texte2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date1" Type="DateTime" Precision="3" />
+    <Property Name="Date2" Type="DateTime" Precision="3" />
+    <Property Name="Entier1" Type="Int32" Nullable="false" />
+    <Property Name="Entier2" Type="Int32" Nullable="false" />
+    <Property Name="Réel1" Type="Double" Nullable="false" />
+    <Property Name="Réel2" Type="Double" Nullable="false" />
+    <Property Name="Flag0" Type="Int16" Nullable="false" />
+    <Property Name="Flag1" Type="Int16" Nullable="false" />
+    <Property Name="InsertDate" Type="DateTime" Precision="3" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ModifDate" Type="DateTime" Precision="3" />
+    <Property Name="IdSite" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ProPlusNetV2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="COMMANDE" EntityType="Self.COMMANDE" />
+  </EntityContainer>
+</Schema>

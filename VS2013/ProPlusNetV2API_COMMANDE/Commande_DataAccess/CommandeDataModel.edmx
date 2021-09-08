@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ProPlusNetV2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="COMMANDE">
+          <Key>
+            <PropertyRef Name="IdCommande" />
+          </Key>
+          <Property Name="IdCommande" Type="int" Nullable="false" />
+          <Property Name="NumCommande" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CodeCommande" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="IdTiers" Type="int" Nullable="false" />
+          <Property Name="DateCommande" Type="datetime" Nullable="false" />
+          <Property Name="IdSemaineCommande" Type="int" Nullable="false" />
+          <Property Name="DateExportPrévue" Type="datetime" />
+          <Property Name="IdSemaineExportPrévue" Type="int" Nullable="false" />
+          <Property Name="DateExportRéelle" Type="datetime" />
+          <Property Name="IdSemaineExportRéelle" Type="int" Nullable="false" />
+          <Property Name="DateLivMatière" Type="datetime" />
+          <Property Name="IdSemaineLivMatière" Type="int" Nullable="false" />
+          <Property Name="IdNote" Type="smallint" Nullable="false" />
+          <Property Name="Annulée" Type="smallint" Nullable="false" />
+          <Property Name="Bloquée" Type="smallint" Nullable="false" />
+          <Property Name="IdEtat" Type="smallint" Nullable="false" />
+          <Property Name="IdStatut" Type="smallint" Nullable="false" />
+          <Property Name="TypeSaisie" Type="smallint" Nullable="false" />
+          <Property Name="ConcernéeParLePlanning" Type="smallint" Nullable="false" />
+          <Property Name="Remarque" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Texte1" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Texte2" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Date1" Type="datetime" />
+          <Property Name="Date2" Type="datetime" />
+          <Property Name="Entier1" Type="int" Nullable="false" />
+          <Property Name="Entier2" Type="int" Nullable="false" />
+          <Property Name="Réel1" Type="float" Nullable="false" />
+          <Property Name="Réel2" Type="float" Nullable="false" />
+          <Property Name="Flag0" Type="smallint" Nullable="false" />
+          <Property Name="Flag1" Type="smallint" Nullable="false" />
+          <Property Name="InsertDate" Type="datetime" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserIP" Type="nvarchar" MaxLength="20" />
+          <Property Name="ModifDate" Type="datetime" />
+          <Property Name="IdSite" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ProPlusNetV2ModelStoreContainer">
+          <EntitySet Name="COMMANDE" EntityType="Self.COMMANDE" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProPlusNetV2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="COMMANDE">
+          <Key>
+            <PropertyRef Name="IdCommande" />
+          </Key>
+          <Property Name="IdCommande" Type="Int32" Nullable="false" />
+          <Property Name="NumCommande" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CodeCommande" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdTiers" Type="Int32" Nullable="false" />
+          <Property Name="DateCommande" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IdSemaineCommande" Type="Int32" Nullable="false" />
+          <Property Name="DateExportPrévue" Type="DateTime" Precision="3" />
+          <Property Name="IdSemaineExportPrévue" Type="Int32" Nullable="false" />
+          <Property Name="DateExportRéelle" Type="DateTime" Precision="3" />
+          <Property Name="IdSemaineExportRéelle" Type="Int32" Nullable="false" />
+          <Property Name="DateLivMatière" Type="DateTime" Precision="3" />
+          <Property Name="IdSemaineLivMatière" Type="Int32" Nullable="false" />
+          <Property Name="IdNote" Type="Int16" Nullable="false" />
+          <Property Name="Annulée" Type="Int16" Nullable="false" />
+          <Property Name="Bloquée" Type="Int16" Nullable="false" />
+          <Property Name="IdEtat" Type="Int16" Nullable="false" />
+          <Property Name="IdStatut" Type="Int16" Nullable="false" />
+          <Property Name="TypeSaisie" Type="Int16" Nullable="false" />
+          <Property Name="ConcernéeParLePlanning" Type="Int16" Nullable="false" />
+          <Property Name="Remarque" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Texte1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Texte2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Date1" Type="DateTime" Precision="3" />
+          <Property Name="Date2" Type="DateTime" Precision="3" />
+          <Property Name="Entier1" Type="Int32" Nullable="false" />
+          <Property Name="Entier2" Type="Int32" Nullable="false" />
+          <Property Name="Réel1" Type="Double" Nullable="false" />
+          <Property Name="Réel2" Type="Double" Nullable="false" />
+          <Property Name="Flag0" Type="Int16" Nullable="false" />
+          <Property Name="Flag1" Type="Int16" Nullable="false" />
+          <Property Name="InsertDate" Type="DateTime" Precision="3" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ModifDate" Type="DateTime" Precision="3" />
+          <Property Name="IdSite" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ProPlusNetV2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="COMMANDE" EntityType="Self.COMMANDE" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProPlusNetV2ModelStoreContainer" CdmEntityContainer="ProPlusNetV2Entities">
+          <EntitySetMapping Name="COMMANDE">
+            <EntityTypeMapping TypeName="ProPlusNetV2Model.COMMANDE">
+              <MappingFragment StoreEntitySet="COMMANDE">
+                <ScalarProperty Name="IdCommande" ColumnName="IdCommande" />
+                <ScalarProperty Name="NumCommande" ColumnName="NumCommande" />
+                <ScalarProperty Name="CodeCommande" ColumnName="CodeCommande" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IdTiers" ColumnName="IdTiers" />
+                <ScalarProperty Name="DateCommande" ColumnName="DateCommande" />
+                <ScalarProperty Name="IdSemaineCommande" ColumnName="IdSemaineCommande" />
+                <ScalarProperty Name="DateExportPrévue" ColumnName="DateExportPrévue" />
+                <ScalarProperty Name="IdSemaineExportPrévue" ColumnName="IdSemaineExportPrévue" />
+                <ScalarProperty Name="DateExportRéelle" ColumnName="DateExportRéelle" />
+                <ScalarProperty Name="IdSemaineExportRéelle" ColumnName="IdSemaineExportRéelle" />
+                <ScalarProperty Name="DateLivMatière" ColumnName="DateLivMatière" />
+                <ScalarProperty Name="IdSemaineLivMatière" ColumnName="IdSemaineLivMatière" />
+                <ScalarProperty Name="IdNote" ColumnName="IdNote" />
+                <ScalarProperty Name="Annulée" ColumnName="Annulée" />
+                <ScalarProperty Name="Bloquée" ColumnName="Bloquée" />
+                <ScalarProperty Name="IdEtat" ColumnName="IdEtat" />
+                <ScalarProperty Name="IdStatut" ColumnName="IdStatut" />
+                <ScalarProperty Name="TypeSaisie" ColumnName="TypeSaisie" />
+                <ScalarProperty Name="ConcernéeParLePlanning" ColumnName="ConcernéeParLePlanning" />
+                <ScalarProperty Name="Remarque" ColumnName="Remarque" />
+                <ScalarProperty Name="Texte1" ColumnName="Texte1" />
+                <ScalarProperty Name="Texte2" ColumnName="Texte2" />
+                <ScalarProperty Name="Date1" ColumnName="Date1" />
+                <ScalarProperty Name="Date2" ColumnName="Date2" />
+                <ScalarProperty Name="Entier1" ColumnName="Entier1" />
+                <ScalarProperty Name="Entier2" ColumnName="Entier2" />
+                <ScalarProperty Name="Réel1" ColumnName="Réel1" />
+                <ScalarProperty Name="Réel2" ColumnName="Réel2" />
+                <ScalarProperty Name="Flag0" ColumnName="Flag0" />
+                <ScalarProperty Name="Flag1" ColumnName="Flag1" />
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+                <ScalarProperty Name="ModifDate" ColumnName="ModifDate" />
+                <ScalarProperty Name="IdSite" ColumnName="IdSite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProPlusNetV2WebService", "ProPlusNetV2WebService\ProPlusNetV2WebService.csproj", "{D5179AA2-94A4-4542-AA92-A9B64BA22F16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProPlusNetV2WebServiceDataAccess", "ProPlusNetV2WebServiceDataAccess\ProPlusNetV2WebServiceDataAccess.csproj", "{889E3637-25F6-4958-B1D9-DED37A00000B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5179AA2-94A4-4542-AA92-A9B64BA22F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5179AA2-94A4-4542-AA92-A9B64BA22F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5179AA2-94A4-4542-AA92-A9B64BA22F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5179AA2-94A4-4542-AA92-A9B64BA22F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{889E3637-25F6-4958-B1D9-DED37A00000B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889E3637-25F6-4958-B1D9-DED37A00000B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889E3637-25F6-4958-B1D9-DED37A00000B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889E3637-25F6-4958-B1D9-DED37A00000B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

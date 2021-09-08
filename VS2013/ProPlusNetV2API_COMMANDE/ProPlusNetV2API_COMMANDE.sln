@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProPlusNetV2API_COMMANDE", "ProPlusNetV2API_COMMANDE\ProPlusNetV2API_COMMANDE.csproj", "{57359BA1-93E3-46F1-B23E-3627DFCF3EA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commande_DataAccess", "Commande_DataAccess\Commande_DataAccess.csproj", "{69DEDFE6-01A6-4BC1-9D56-000311D3EAD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57359BA1-93E3-46F1-B23E-3627DFCF3EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57359BA1-93E3-46F1-B23E-3627DFCF3EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57359BA1-93E3-46F1-B23E-3627DFCF3EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57359BA1-93E3-46F1-B23E-3627DFCF3EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69DEDFE6-01A6-4BC1-9D56-000311D3EAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69DEDFE6-01A6-4BC1-9D56-000311D3EAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69DEDFE6-01A6-4BC1-9D56-000311D3EAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69DEDFE6-01A6-4BC1-9D56-000311D3EAD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
